@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/apps/nextjs",
+    "emitDeclarationOnly": false,
+    "incremental": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "include": [
+    ".eslintrc.js",
+    "next-env.d.ts",
+    "pages/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    {
+      "path": "../../packages/browser-package"
+    }
+  ]
+}

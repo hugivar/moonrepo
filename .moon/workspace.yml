@@ -1,0 +1,21 @@
+# Trigger CI: 14
+
+$schema: 'https://moonrepo.dev/schemas/workspace.json'
+
+versionConstraint: '>=0.24.0'
+
+projects:
+  browser-package: 'packages/browser-package'
+  nextjs: 'apps/nextjs'
+
+vcs:
+  manager: 'git'
+  defaultBranch: 'master'
+
+runner:
+  archivableTargets:
+    - ':format'
+    - ':lint'
+    - ':test'
+    - ':typecheck'
+  logRunningCommand: true
